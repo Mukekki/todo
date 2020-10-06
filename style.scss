@@ -1,0 +1,104 @@
+@import "./default.scss";
+@import "./modal.scss";
+
+
+body {
+   background-color: #eee;
+}
+
+.body_content {
+   padding: 20px;
+   width: 700px;
+   margin: 20px auto;
+   background-color: #ccc;
+   padding: 5px;
+    .input_text {
+       display: block;
+       width: 500px;
+       margin: 10px auto;
+
+   }
+    .input_comment {
+       display: block;
+       width: 500px;
+       margin: 10px auto;
+   }
+   .important{
+      display: inline-block;
+   }
+}
+
+.type{
+  text-align: center;
+}
+
+.check_important {
+   display: flex;
+   justify-content: center;
+   margin: 20px auto;
+}
+
+.button {
+   border-radius: 15px;
+   padding: 10px;;
+   text-align: center;
+   width: 200px;
+   margin: 0 auto;
+   border: 2px solid #000;
+   cursor: pointer;
+   transition: all .3s;
+   &:hover{
+      background-color: rgba(111, 252, 123, 0.521);
+   }
+}
+
+
+// классы для листа
+.list {
+   background-color: #ccc;
+   width: 700px;
+   padding: 5px;
+   margin: 0 auto;
+}
+.list_item {
+   display: flex;
+   justify-content: space-around;
+   background-color: #bbb;
+   div, input{
+      padding: 5px;
+   }
+   .type_text{
+      font-size: 18px;
+      align-items: center;
+   }
+   .edit{
+      text-align: center;
+   }
+}
+
+.edit_buttons {
+   border-radius: 15px;
+   margin: 5px;
+   padding: 10px;;
+   text-align: center;
+   width: 200px;
+   border: 1px solid #000;
+   cursor: pointer;
+   transition: all .3s;
+   &:hover{
+      background-color: rgba(111, 252, 123, 0.521);
+   }
+}
+.edit_buttons_danger {
+   border-radius: 15px;
+   margin: 5px;
+   padding: 10px;;
+   text-align: center;
+   width: 200px;
+   border: 1px solid #000;
+   cursor: pointer;
+   transition: all .3s;
+   &:hover{
+      background-color: rgba(252, 111, 111, 0.521);
+   }
+}
