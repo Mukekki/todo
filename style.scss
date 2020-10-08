@@ -2,11 +2,15 @@
 @import "./modal.scss";
 
 
+ 
 body {
-   background-color: #eee;
+   background-color: #aaa;
+   font-family: 'Roboto Slab', serif;
 }
 
 .body_content {
+   border: 2px solid #777;
+   border-radius: 10px;
    padding: 20px;
    width: 700px;
    margin: 20px auto;
@@ -53,29 +57,58 @@ body {
 }
 
 
-// классы для листа
+// классы для листа (list items)
 .list {
+   border: 2px solid #777;
+   border-radius: 10px;
    background-color: #ccc;
    width: 700px;
    padding: 5px;
    margin: 0 auto;
 }
 .list_item {
+   border: 2px solid #777;
+   border-radius: 10px;
+   margin: 5px;
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
    background-color: #bbb;
-   div, input{
+   min-height: 100px;
+   div{
       padding: 5px;
+      padding-bottom: 10px;
    }
    .type_text{
-      font-size: 18px;
-      align-items: center;
+      font-size: 30px;
+      
    }
    .edit{
       text-align: center;
    }
+   .list_text {
+      padding-bottom: 24px;
+   }
 }
 
+
+
+.list_item.important {
+   display: flex;
+   justify-content: space-between;
+   border: 2px solid rgb(255, 131, 59);
+   box-shadow: inset 0px 0px 70px rgba(255, 163, 59, 0.363);
+   .type_text {
+      font-size: 30px;
+   }
+   .edit {
+      text-align: center;
+   }
+   .list_text {
+      padding-bottom: 24px;
+   }
+}
+// end list items
+// buttons
 .edit_buttons {
    border-radius: 15px;
    margin: 5px;
@@ -86,7 +119,8 @@ body {
    cursor: pointer;
    transition: all .3s;
    &:hover{
-      background-color: rgba(111, 252, 123, 0.521);
+      background-color: rgba(78, 95, 252, 0.521);
+      box-shadow: 1px 1px 15px 1px #777;
    }
 }
 .edit_buttons_danger {
@@ -98,7 +132,9 @@ body {
    border: 1px solid #000;
    cursor: pointer;
    transition: all .3s;
+   
    &:hover{
       background-color: rgba(252, 111, 111, 0.521);
+      box-shadow: 1px 1px 15px 1px #777;
    }
 }

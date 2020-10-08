@@ -49,19 +49,18 @@
 /* defaul value */
 
 .modal_content {
-   min-height: 300px;
-   padding: 20px;
+   min-height: 200px;
+   max-width: 500px;
+   padding: 5px;
    background-color: #fff;
    margin: 0 auto;
    width: max-content;
    transform: translateY(-200px);
-   transition: all .3s;
+   transition: all .5s;
    border-radius: 5px;
-}
-.modal_content {
-   padding: 5px;
    font-size: 30px;
 }
+
 .modal_head {
    padding: 0px;
    display: flex;
@@ -76,7 +75,7 @@
    background-color: rgba(0, 0, 0, 0.5);
    opacity: 0;
    z-index: -1;
-   transition: all .3s;
+   transition: all .5s;
 }
 
 .modal_exit {
@@ -85,11 +84,13 @@
    -ms-user-select: none;
    user-select: none;
    font-size: 50px;
-   transition: all .3s;
+   transition: all .5s;
+   transform: translateX(-10px);
 }
 
 .modal_exit:hover{
-   transform: translateY(-2px);
+   transform: translateX(-10px);
+   transform: translate(-10px, -2px);
    color: black;
    text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
 
@@ -99,12 +100,28 @@
 }
 .modal_text {
    padding: 10px;
-   div {
-      padding: 20px 0px;
-   }
 }
 .change-text {
    display: block;
-   padding-top: 20px;
-   margin-top: 20px;
+   width: 98%;
+   margin: 20px auto;
+   min-height: 100px;
+}
+.modal_new_value {
+   text-decoration: underline;
+   font-size: 20px;
+}
+
+.modal_checkboxes {
+   font-size: 25px;
+   display: flex;
+   justify-content: start;
+   div{
+      padding-right: 20px;
+      font-size: 18px;
+   }
+}
+.modal_footer {
+   display: flex;
+   justify-content: space-between;
 }
