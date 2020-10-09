@@ -175,6 +175,7 @@ const addItemToList = () => {
    setArray();
    value.value = '';
    comment.value = '';
+   important.checked = false;
    return object
 };
 
