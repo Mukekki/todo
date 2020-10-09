@@ -1,8 +1,6 @@
 @import "./default.scss";
 @import "./modal.scss";
 
-
- 
 body {
    background-color: #aaa;
    font-family: 'Roboto Slab', serif;
@@ -10,22 +8,47 @@ body {
 
 .body_content {
    border: 2px solid #777;
-   border-radius: 10px;
+   border-radius: 20px;
    padding: 20px;
-   width: 700px;
+   min-width: 300px;
+   max-width: 900px;
    margin: 20px auto;
    background-color: #ccc;
    padding: 5px;
     .input_text {
-       display: block;
-       width: 500px;
-       margin: 10px auto;
+      background: none ;
+      border: none;
+      border-bottom: solid 2px #000;
+      display: block;
+      width: 99%;
+      max-width: 500px;
+      margin: 10px auto;
+      padding: 0px;
+      &:focus{
+        background: none ;
+        border: none;
+        border-bottom: solid 2px #000;
+        color: none;
+        color: -internal-light-dark(grey, yellow);
+      }
 
    }
     .input_comment {
-       display: block;
-       width: 500px;
-       margin: 10px auto;
+      background: none ;
+      border: none;
+      border-bottom: solid 2px #000;
+      display: block;
+      width: 99%;
+      max-width: 500px;
+      margin: 10px auto;
+      padding: 0px;
+      &:focus{
+         background: none ;
+         border: none;
+         border-bottom: solid 2px #000;
+         color: none;
+         color: -internal-light-dark(grey, yellow);
+      }
    }
    .important{
       display: inline-block;
@@ -46,7 +69,8 @@ body {
    border-radius: 15px;
    padding: 10px;;
    text-align: center;
-   width: 200px;
+   min-width: 300px;
+   max-width: 900px;
    margin: 0 auto;
    border: 2px solid #000;
    cursor: pointer;
@@ -56,13 +80,13 @@ body {
    }
 }
 
-
 // классы для листа (list items)
 .list {
    border: 2px solid #777;
-   border-radius: 10px;
+   border-radius: 20px;
    background-color: #ccc;
-   width: 700px;
+   min-width: 300px;
+   max-width: 900px;
    padding: 5px;
    margin: 0 auto;
 }
@@ -89,8 +113,6 @@ body {
       padding-bottom: 24px;
    }
 }
-
-
 
 .list_item.important {
    display: flex;
@@ -119,7 +141,7 @@ body {
    cursor: pointer;
    transition: all .3s;
    &:hover{
-      background-color: rgba(78, 95, 252, 0.521);
+      background-color: rgba(78, 252, 116, 0.521);
       box-shadow: 1px 1px 15px 1px #777;
    }
 }

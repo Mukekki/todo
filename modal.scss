@@ -49,7 +49,9 @@
 /* defaul value */
 
 .modal_content {
-   min-height: 200px;
+   max-height: 500px;
+   min-height: 150px;
+   min-width: 150px;
    max-width: 500px;
    padding: 5px;
    background-color: #fff;
@@ -106,10 +108,14 @@
    width: 98%;
    margin: 20px auto;
    min-height: 100px;
+   text-decoration: none;
 }
 .modal_new_value {
-   text-decoration: underline;
-   font-size: 20px;
+   
+   span{
+      text-decoration: underline;
+      font-size: 20px;
+   }
 }
 
 .modal_checkboxes {

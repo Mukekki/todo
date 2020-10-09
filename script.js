@@ -17,8 +17,12 @@ const getArray = () =>{
    const array = localStorage.getItem('todo');
    let todo = JSON.parse(array)
    if (todo === null){
+      listBody.style.display = "none";
       return []
-   } else return todo
+      
+   }  else 
+      listBody.style.display = "block";
+      return todo
 };
 
 let todo = getArray();
@@ -27,22 +31,9 @@ const setArray = () => {
    localStorage.setItem('todo', JSON.stringify(todo))
 }
 
-{/*  */}
-let temp = 0;
 
 const createNodeListItem = (object) => {
    const createDiv = document.createElement('div');
-   if (object.important === true){
-      createDiv.classList = 'list_item important'
-      } else {
-         createDiv.classList = 'list_item'
-      };
-   if (object.complited === true) {
-      createDiv.style.background = 'rgba(111, 252, 123, 0.7)';
-      createDiv.style.textDecoration = 'line-through';
-   } else {
-      createDiv.style.background = 'none'
-      };
    createDiv.id = object.id;
    createDiv.insertAdjacentHTML('beforeend',`
       <div class="list_content">
@@ -54,7 +45,20 @@ const createNodeListItem = (object) => {
          <div class="edit_buttons_danger" data-remove="true">удалить</div>
       </div>
 `);
-   listBody.insertBefore(createDiv, listBody.firstChild)
+   listBody.insertBefore(createDiv, listBody.firstChild);
+   const contentHtml = createDiv.querySelector('.list_content');
+   if (object.important === true){
+      createDiv.classList = 'list_item important'
+      } else {
+         createDiv.classList = 'list_item'
+      };
+   if (object.complited === true) {
+      createDiv.style.background = 'rgba(111, 252, 123, 0.7)';
+      
+      contentHtml.style.textDecoration = 'line-through';
+   } else {
+      createDiv.style.background = 'none'
+      };
    return createDiv
 };
 class ListItem {
@@ -95,10 +99,11 @@ class ListItem {
    };
    #appendContent(content) {
       const addHtml = this.$render.querySelector('.list_text');
+      const contentHtml = this.$render.querySelector('.list_content')
       this.comment = content.value;
       addHtml.innerHTML = content.value;
       this.important = content.important;
-
+      console.log
       if (content.important === true) {
          this.$render.classList = 'list_item important'
       } else {
@@ -108,11 +113,11 @@ class ListItem {
       if(content.complited === true) {
          this.complited = true
          this.$render.style.background = 'rgba(111, 252, 123, 0.7)'
-         this.$render.style.textDecoration = 'line-through';
+         contentHtml.style.textDecoration = 'line-through';
       } else {
          this.complited = false
          this.$render.style.background = 'none'
-         this.$render.style.textDecoration = 'none'
+         contentHtml.style.textDecoration = 'none'
       };
 
       const index = todo.findIndex((object) =>{
@@ -145,6 +150,7 @@ const _createListItem = (object) =>{
 };
 
 const addItemToList = () => {
+   listBody.style.display = "block";
    const idCreate = () => {
       if (todo.length > 0) {
          return todo[todo.length-1].id + 1
@@ -152,7 +158,7 @@ const addItemToList = () => {
          return 0
       }
    };
-
+   
    const object = {
       id: idCreate(),
       value: value.value,

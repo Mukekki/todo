@@ -101,7 +101,9 @@ h6 {
 /* ========  */
 /* defaul value */
 .modal_content {
-  min-height: 200px;
+  max-height: 500px;
+  min-height: 150px;
+  min-width: 150px;
   max-width: 500px;
   padding: 5px;
   background-color: #fff;
@@ -173,9 +175,10 @@ h6 {
   display: block;
   width: 98%;
   margin: 20px auto;
-  min-height: 100px; }
+  min-height: 100px;
+  text-decoration: none; }
 
-.modal_new_value {
+.modal_new_value span {
   text-decoration: underline;
   font-size: 20px; }
 
@@ -205,20 +208,43 @@ body {
 
 .body_content {
   border: 2px solid #777;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 20px;
-  width: 700px;
+  min-width: 300px;
+  max-width: 900px;
   margin: 20px auto;
   background-color: #ccc;
   padding: 5px; }
   .body_content .input_text {
+    background: none;
+    border: none;
+    border-bottom: solid 2px #000;
     display: block;
-    width: 500px;
-    margin: 10px auto; }
+    width: 99%;
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 0px; }
+    .body_content .input_text:focus {
+      background: none;
+      border: none;
+      border-bottom: solid 2px #000;
+      color: none;
+      color: -internal-light-dark(grey, yellow); }
   .body_content .input_comment {
+    background: none;
+    border: none;
+    border-bottom: solid 2px #000;
     display: block;
-    width: 500px;
-    margin: 10px auto; }
+    width: 99%;
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 0px; }
+    .body_content .input_comment:focus {
+      background: none;
+      border: none;
+      border-bottom: solid 2px #000;
+      color: none;
+      color: -internal-light-dark(grey, yellow); }
   .body_content .important {
     display: inline-block; }
 
@@ -238,7 +264,8 @@ body {
   border-radius: 15px;
   padding: 10px;
   text-align: center;
-  width: 200px;
+  min-width: 300px;
+  max-width: 900px;
   margin: 0 auto;
   border: 2px solid #000;
   cursor: pointer;
@@ -250,9 +277,10 @@ body {
 
 .list {
   border: 2px solid #777;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: #ccc;
-  width: 700px;
+  min-width: 300px;
+  max-width: 900px;
   padding: 5px;
   margin: 0 auto; }
 
@@ -307,7 +335,7 @@ body {
   -o-transition: all .3s;
   transition: all .3s; }
   .edit_buttons:hover {
-    background-color: rgba(78, 95, 252, 0.521);
+    background-color: rgba(78, 252, 116, 0.521);
     -webkit-box-shadow: 1px 1px 15px 1px #777;
     box-shadow: 1px 1px 15px 1px #777; }
 

@@ -106,7 +106,7 @@ const _createModal = (options) => {
                      ${ options.closable ? `<div class="modal_exit" data-close="true">&times;</div>` : ''}
                      </div>
                   <div class="modal_text">
-                  ${!options.deleted === true ? `<div class="modal_new_value">Введите новое значение: <input type="text" class="change-text" id="change-text" value="${options.comment}"></div>
+                  ${!options.deleted === true ? `<div class="modal_new_value"> <span>Введите новое значение:</span> <input type="text" class="change-text" id="change-text" value="${options.comment}"></div>
                      <div class="modal_checkboxes"><div class="modal_important"><input class="importantCheckbox" type="checkbox" ${options.important ? 'checked' : ''}>Важная задача</div>
                      <div class="modal_complited"><input type="checkbox" class="doneCheckbox" ${options.complited ? 'checked' : ''}>Выполнено</div>` : `оно содержит значение : ${options.comment}</div></div>`}
                   </div>
